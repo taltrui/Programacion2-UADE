@@ -2,9 +2,9 @@ package impl;
 
 import java.util.Arrays;
 
-import api.StackADT;
+import api.Stack;
 
-public class Stack3 implements StackADT {
+public class Stack3 implements Stack {
 	int[] stack;
 
 	@Override

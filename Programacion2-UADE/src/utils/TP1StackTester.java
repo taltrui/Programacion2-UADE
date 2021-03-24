@@ -1,12 +1,12 @@
 package utils;
 
-import api.StackADT;
+import api.Stack;
 import impl.Stack1;
 import impl.Stack2;
 import impl.Stack3;
 
 public class TP1StackTester {
-	int sumStack(StackADT stack) {
+	int sumStack(Stack stack) {
 		int sum = 0;
 		while (!stack.isEmpty()) {
 			sum += stack.lastElement();
@@ -17,7 +17,7 @@ public class TP1StackTester {
 		return sum;
 	}
 
-	int countStack(StackADT stack) {
+	int countStack(Stack stack) {
 		int count = 0;
 		while (!stack.isEmpty()) {
 			count += 1;
@@ -28,7 +28,7 @@ public class TP1StackTester {
 		return count;
 	}
 
-	void transferStack(StackADT stack, StackADT newStack) {
+	void transferStack(Stack stack, Stack newStack) {
 		while (!stack.isEmpty()) {
 			newStack.push(stack.lastElement());
 			stack.pop();
@@ -36,7 +36,7 @@ public class TP1StackTester {
 		populateStack(stack);
 	}
 
-	void copyStack(StackADT stack, StackADT newStack, StackADT bufferStack) {
+	void copyStack(Stack stack, Stack newStack, Stack bufferStack) {
 		while (!stack.isEmpty()) {
 			bufferStack.push(stack.lastElement());
 			stack.pop();
@@ -50,7 +50,7 @@ public class TP1StackTester {
 		}
 	}
 
-	void invertStack(StackADT stack, StackADT bufferStack, StackADT secondBuffer) {
+	void invertStack(Stack stack, Stack bufferStack, Stack secondBuffer) {
 		populateStack(stack);
 
 		while (!stack.isEmpty()) {
@@ -69,21 +69,21 @@ public class TP1StackTester {
 		}
 	}
 
-	float stackAverage(StackADT stack) {
+	float stackAverage(Stack stack) {
 		float count = countStack(stack);
 		float sum = sumStack(stack);
 
 		return sum / count;
 	}
 
-	void populateStack(StackADT stack) {
+	void populateStack(Stack stack) {
 		stack.initializeStack();
 		for (int i = 0; i < 10; i++) {
 			stack.push(i + 1);
 		}
 	}
 
-	void printStack(String title, StackADT stack) {
+	void printStack(String title, Stack stack) {
 		System.out.print("\n\n" + title + ":\n");
 		stack.print();
 	}
@@ -92,7 +92,7 @@ public class TP1StackTester {
 		System.out.print("\n\n" + title);
 	}
 
-	void test(StackADT stack, StackADT test1NewStack, StackADT test1BufferStack, StackADT test1SecondBufferStack) {
+	void test(Stack stack, Stack test1NewStack, Stack test1BufferStack, Stack test1SecondBufferStack) {
 		printTitle("Test 1 - Move one stack to another");
 		transferStack(stack, test1NewStack);
 		printStack("Original", stack);

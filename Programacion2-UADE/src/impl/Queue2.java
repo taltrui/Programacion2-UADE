@@ -2,9 +2,9 @@ package impl;
 
 import java.util.Arrays;
 
-import api.QueueTDA;
+import api.Queue;
 
-public class Queue2 implements QueueTDA {
+public class Queue2 implements Queue {
 	int[] stack;
 	int index;
 

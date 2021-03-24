@@ -2,9 +2,9 @@ package impl;
 
 import java.util.Arrays;
 
-import api.StackADT;
+import api.Stack;
 
-public class Stack1 implements StackADT {
+public class Stack1 implements Stack {
 	int[] stack;
 	int index;
 

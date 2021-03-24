@@ -1,6 +1,6 @@
 package api;
 
-public interface QueueTDA {
+public interface Queue {
 	void push(int x);
 
 	void pop();

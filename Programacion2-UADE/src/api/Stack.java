@@ -1,6 +1,6 @@
 package api;
 
-public interface StackADT {
+public interface Stack {
 	void push(int x);
 
 	void pop();
