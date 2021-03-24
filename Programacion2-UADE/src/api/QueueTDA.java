@@ -1,15 +1,15 @@
 package api;
 
-public interface StackADT {
+public interface QueueTDA {
 	void push(int x);
 
 	void pop();
 
-	void initializeStack();
+	void initialize();
 
 	boolean isEmpty();
 
-	int lastElement();
+	int first();
 
 	void print();
 }
