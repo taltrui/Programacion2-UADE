@@ -22,7 +22,6 @@ public class Stack3 implements Stack {
 	public void initializeStack() {
 		stack = new int[20];
 		stack[0] = 0;
-
 	}
 
 	@Override
